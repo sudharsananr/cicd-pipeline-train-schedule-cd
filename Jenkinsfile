@@ -21,9 +21,9 @@ pipeline {
                             sshPublisherDesc(
                                 configName: 'staging',
                                 sshCredentials: [
-                                    username: "$USERNAME",
-                                    encryptedPassphrase: "$USERPASS"
-                                ], 
+                                    encryptedPassphrase: '{AQAAABAAAAAgK5SrzMKFYlMPa2SpobYaZZUOJ60PvNJyau2XHDpc3T34/axDD+sFug9n349Ke6q8}', 
+                                    username: 'cloud_user'
+                                ],
                                 transfers: [
                                     sshTransfer(
                                         sourceFiles: 'dist/trainSchedule.zip',
