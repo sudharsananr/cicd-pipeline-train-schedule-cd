@@ -20,9 +20,9 @@ pipeline {
                         publishers: [
                             sshPublisherDesc(
                                 configName: 'staging',
-                                sshCredentials: [
-                                    encryptedPassphrase: '{AQAAABAAAAAgK5SrzMKFYlMPa2SpobYaZZUOJ60PvNJyau2XHDpc3T34/axDD+sFug9n349Ke6q8}', 
-                                    username: 'cloud_user'
+                        sshCredentials: [
+                                    username: "$USERNAME",
+                                    encryptedPassphrase: "$USERPASS"
                                 ],
                                 transfers: [
                                     sshTransfer(
